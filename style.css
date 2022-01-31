@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     background-color: aqua;
+}
+
+#container{
+    display: grid;
+    place-items: center;
+    height: 100vh;  
+}
+#circle{
+    height: 400px;
+    width: 400px;
+    background-color: brown;
+   
+    z-index: -1;
+    border-radius: 50%;
+    position: relative;
+     overflow: hidden;
+
+     animation-name:pokeman ;
+     animation-duration: 5s;
+     animation-iteration-count:infinite;
+     animation-timing-function: ease-in-out;
+}
+#pockmonball{
+    height: 100px;
+    width: 100px;
+    
+    background-color: white;
+    border: 34px solid brown;
+    border-radius: 50%;
+    
+    position: absolute;
+    top: 50%;
+    left:50%;
+    
+    transform: translate(-50% ,-50%);
+    
+    z-index: 2;
+}
+#circle:before{
+    content: "";
+    
+    height: 200px;
+    width: 400px;
+    background-color: rgb(255, 60, 0);
+   
+    z-index: 1;
+    position: absolute;
+    top: -3%;
+
+}#circle:after{
+    content: "";
+    
+    height: 200px;
+    width: 400px;
+    background-color: rgb(250, 248, 250);
+   
+    z-index: 1;
+    position: absolute;
+    top:53%;
+    
+
+}
+
+
+
+@keyframes pokemon{
+  0%{
+    transform: rotate(0deg);
+    top: 0;
+    left: 0%;
+  }
+  50%{
+     transform: rotate(-180deg);
+    top:10%;
+    left: -30%;
+  }
+  75%{
+     transform: rotate(0deg); 
+    top:10%;
+    left:20%;
+  }
+  100%{
+    top:0%;
+    left: 0%;
+  }
+
+}
